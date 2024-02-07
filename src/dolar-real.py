@@ -8,7 +8,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 pagina = requests.get("https://www.google.com/search?q=cotacao+dolar", headers=headers)
 site = BeautifulSoup(pagina.content, 'html.parser')
 #Localiza no site a cotacao do dolar
-cotacao_dolar = (site.find("span", class_="SwHCTb"))
+cotacao_dolar = (site.find("span", {'class':'SwHCTb'}))
 print(f'''{date.today()}
 1 dolar equivale a {cotacao_dolar.get_text()} reais''')
 #Pega apenas o valor da cotacao
