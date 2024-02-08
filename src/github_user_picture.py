@@ -9,4 +9,5 @@ def get_picture_link(github_user):
 
 
 user = str(input("Input Github user: "))
-print(get_picture_link(user))
+print(f'{user} profile picture link: \n{get_picture_link(user)}')
+
